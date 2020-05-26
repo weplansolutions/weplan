@@ -1,0 +1,605 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>We Plan Solutions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .container1-fluid {
+    padding: 200px 200px;
+    background-color: #2d2d30;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  footer{
+	bottom: 0;
+}
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+
+}
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  .dropbtn {
+  margin-bottom: 0;
+    
+    z-index: 9999;
+    border: 0;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 2px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  background-color: #2d2d30 ;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 7px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {text-decoration:underline ;text-decoration-color: White;}
+.separator-type, .title-type, .intro-type, .content-type .intro-type p {
+    position: relative;
+}
+
+.container1 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+</style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>                        
+			</button>
+			<a href="index.html"><button class="dropbtn"> We Plan Solutions</button></a>    </div>
+		  <div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+		  <div class="dropdown">
+		  
+			<a href="index.html"><button class="dropbtn"><i class="fa fa-home"></i> Home</button></a>
+		  </div>
+			  <div class="dropdown">
+			<button class="dropbtn"><i class="fa fa-wrench"></i> Services</button>
+			<div class="dropdown-content">
+				<a href="eiplans.html">EI Plans</a>
+				<a href="internships.html">Internships</a>
+				<a href="workshops.html">Workshops</a>
+				<a href="seminars.html">Seminars</a>
+			<a href="sciencefair.html">Science Fairs</a>
+			
+		  </div></div>
+		  <div class="dropdown">
+			<a href="collaborations.html"><button class="dropbtn"><i class="fa fa-building-o"></i> Collaborations</button></a>
+		  </div>
+		  <div class="dropdown">
+			<a href="login.html"><button class="dropbtn"><i class="fa fa-user"></i> Log in</button></a>
+		  </div>
+	  <div class="dropdown">
+			 <button class="dropbtn"><i class="fa fa-reorder"></i> More</button>
+			<div class="dropdown-content">
+        <a href="about.html">About We Plan</a>
+				<a href="ourteam.html">Our Team</a>
+				<a href="careers.html">Careers</a>
+				<a href="terms&conditions.html">Terms and Conditions</a>
+		   </div>
+	  </div>
+		  <div class="dropdown">
+			<a href="contact.html"><button class="dropbtn"><i class="fa fa-phone"></i> Contact</button></a>
+		  </div>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+      <br></br>
+      <div class="container1">
+        <img src="{% static 'about.png' %}" alt="Chicago" style=" height:400px;width: 100%;">
+        </div>
+        <br></br>
+      <div class="container">
+          <p style="font-size: 20px;color: black;">Looking for academic calendars? Trouble in making a schedule or timetable? Need to manage
+            students’ performance? Want monthly attendance reports? Then, you have come to the right
+            place. If these are the things you are looking for then the perfect place for all these things is
+            We Plan.
+            </p>
+          <h3 style="font-size: 30px;color: black;">About We Plan</h3>
+          <p style="font-size: 15px;color: black;">We Plan is a start-up company led by a few BBAs and MBA’s students. It is an educational
+            support service which not only provides academic calendars but also non- academic calendars.
+            Here, the experts are in all departments and additional psychologists, who provides best
+            strategic academic calendars as well as plans for educational institutes such as schools and
+            colleges. The strategy makers have perceived course which avails to engender plans and
+            effective strategy.</p>
+          <p style="font-size: 15px;color: black;">Not only We Plan provides academic calendars but also helps students in managing their
+            syllabus by preparing time table for students based on their syllabus so that they could use their
+            time and energy efficiently. If required We Plan has also has a facility to evaluate assignments
+            and also prepare assignments.</p>
+            <p></p>
+            <h3 style="font-size: 30px;color: black;">Who makes your plan? </h3>
+            <p style="font-size: 15px;color: black;">The strategy makers have perceived course which helps to prepare plans and effective strategy.
+                The academic calendar is made by MBA’s and BBA’s who had consummated their course in
+                Management core functions. The planning or coordination of the elements of your academic
+                and non-academic calendar to produce a desired effect is made under the edifiers who have
+                deeply learnt the concepts of management and psychology in their studies based on the
+                phycology of students. They avail in orchestrating the subject accordingly.</p>
+                <p></p>
+                <h3 style="font-size: 30px;color: black;">Other services </h3>
+                <p style="font-size: 15px;color: black;">We Plan also provides internships in management, Engineering and administration fields and helps the
+                    interns by providing them knowledge of subjects and the practical world. It also designs
+                    workshops, seminars, and science fairs by collaborating with schools and colleges. </p>
+      </div>
+      
+<footer class="footer-distributed">
+ 
+    <div class="footer-left">
+  
+    <a href="#myPage"><img src="{% static 'icon.png' %}" style=" height:140px;width:180px;"></a>
+  
+    <p class="footer-links">
+    <a href="index.html">Home</a>
+  ·
+    <a href="collaborations.html">Collaborations</a>
+  
+  .	<a href="contact.html">Contact Us</a>
+  
+    <a href="#"></a>
+    </p>
+  
+    <p class="footer-company-name">We Plan Solutions &copy; 2020</p>
+    </div>
+  
+    <div class="footer-center">
+  
+    <div>
+    <i class="fa fa-map-marker"></i>
+    <p><span></span>Khammam, IND</p>
+    </div>
+  
+    <div>
+    <i class="fa fa-phone"></i>
+    <p>+91 8008401874</p>
+    </div>
+  
+    <div>
+    <i class="fa fa-envelope"></i>
+    <p><a href="mailto:info@weplansolutions.com">info@weplansolutions.com</a></p>
+    </div>
+  
+    </div>
+  
+    <div class="footer-right">
+  
+    <p class="footer-company-about">
+    <span>About the company</span>
+  We Plan is an Educational support service based start-up company led by few BBA and MBA students, we avail you to engender academic and non-academic plans for schools and colleges. 
+    </p>
+  
+    <div class="footer-icons">
+  
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+  
+    </div>
+  
+    </div>
+  
+    </footer>
+  
+  <script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+    
+    $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+  
+        var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+      });
+    });
+  })
+  </script>
+  
+  </body>
+  </html>
+  
